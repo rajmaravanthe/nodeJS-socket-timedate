@@ -9,8 +9,8 @@ app.get('/', function (req, res, next) {
 });
 io.on('connection', function (socket) {
     setInterval(function () {
-        socket.emit('datetime', { datetime: new Date().getTime() });
-    }, 15000);
+        socket.emit('message', { message: "welcome to my socket.io app"});
+    }, 20000);
 
 
 });
